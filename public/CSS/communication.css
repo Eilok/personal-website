@@ -1,0 +1,412 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* responsive design. set html initial font-size 10px which is relatived to my computer */
+html {
+    font-size: 0.78125vw;
+}
+
+/* set the whole page */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 8.815fr;
+    grid-column-gap: 0;
+    grid-template-rows: 10fr 1fr;
+    height: 100vh;
+}
+
+
+/* style of functional area */
+.functional-area {
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #90bbe9;
+}
+
+.functional-area > .head {
+    position: relative;
+    margin-top: 2.5rem;
+}
+
+.functional-area > .head > img {
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+}
+
+.functional-area > .head::after {
+    content: "login";
+    position: absolute;
+    z-index: 10;
+    left: 100%;
+    top: 50%;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    opacity: 0;
+}
+
+.functional-area > .head:hover::after {
+    opacity: 1;
+}
+
+
+.functional-area > .function-key {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    list-style: none;
+}
+
+.function-key > li{
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.function-key > li > img {
+    width: 5.2rem;
+    cursor: pointer;
+}
+
+.function-key > li:nth-child(1)::after {
+    content: "user list";
+    position: absolute;
+    z-index: 10;
+    left: 100%;
+    top: 50%;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    opacity: 0;
+}
+
+.function-key > li:nth-child(1):hover::after {
+    opacity: 1;
+}
+
+.function-key > li:nth-child(2)::after {
+    content: "personal communication";
+    position: absolute;
+    z-index: 10;
+    left: 100%;
+    top: 50%;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    opacity: 0;
+}
+
+.function-key > li:nth-child(2):hover::after {
+    opacity: 1;
+}
+
+.function-key > li:nth-child(3)::after {
+    content: "setting";
+    position: absolute;
+    z-index: 10;
+    left: 100%;
+    top: 50%;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    opacity: 0;
+}
+
+.function-key > li:nth-child(3):hover::after {
+    opacity: 1;
+}
+
+.functional-area > .exit {
+    position: relative;
+    margin-top: 15rem;
+}
+
+.functional-area > .exit > img {
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+}
+
+.functional-area > .exit::after {
+    content: "exit";
+    position: absolute;
+    z-index: 10;
+    left: 100%;
+    top: 50%;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    opacity: 0;
+}
+
+.functional-area > .exit:hover::after {
+    opacity: 1;
+}
+
+
+/* style of user list */
+.user-list {
+    grid-row: 1 / span 2;
+    width: 30rem;
+    overflow-y: scroll;
+    background-color: #b7d4f2;
+    list-style: none;
+}
+
+.user-list > .user-number-display {
+    width: 100%;
+    height: 5rem;
+    border-bottom: 0.3rem solid #8c8e92;
+}
+
+.user-number-display > div {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1rem 0 0 1rem;
+    vertical-align: bottom;
+    background-color: #20c04a;
+    border-radius: 50%;
+}
+
+.user-number-display > p {
+    display: inline-block;
+    color: black;
+    font-size: 2.5rem;
+}   
+
+.user-area {
+    display: grid;
+    grid-template-columns: 7fr 23fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 7rem;
+    border-bottom: 0.2rem solid #b6b9bd;
+}
+
+.user-area > .user-head {
+    grid-row: 1 / span 2;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
+.user-area > .user-name {
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.user-area > .type-msg {
+    margin-left: 0.2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #b0b2b8;
+}
+
+/* style of chat box */
+.chat-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+/* system message in chat box */
+.login-logout {
+    width: 40rem;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    background-color: rgba(210, 213, 219, 0.6);
+    font-size: 2rem;
+    color: #a2a3a5;
+    text-align: center;
+}
+
+/* own message in chat box */
+.own-msg {
+    width: 40rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.own-head {
+    font-size: 2rem;
+}
+
+.own-display {
+    padding: 1rem 1rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #7763f7;
+    border-radius: 2rem;
+}
+
+/* other message in chat box */
+.other-msg {
+    width: 40rem;
+    margin-right: auto;
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.other-head {
+    font-size: 2rem;
+}
+
+.other-display {
+    padding: 1rem 1rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #bfc1c6;
+    border-radius: 2rem;
+}
+
+/* style of input field */
+.input-field {
+    display: flex;
+    flex-direction: row;
+    background-color: #dcdcdc;
+}
+
+.input-field > input {
+    background-color: #dcdcdc;
+    width: 80rem;
+    border: none;
+    font-size: 2rem;
+}
+
+.input-field > div {
+    position: relative;
+}
+
+.input-field > div > img {
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+}
+
+.input-field > div::after {
+    content: "send";
+    position: absolute;
+    z-index: 10;
+    left: -50%;
+    top: 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    opacity: 0;
+}
+
+.input-field > div:hover::after {
+    opacity: 1;
+}
+
+/* style of login interface */
+.bg-login {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(210, 213, 219, 0.8);
+}
+
+.login {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 60rem;
+    background-color: #90bbe9;
+    border-radius: 7rem;
+}
+
+.login > h3 {
+    margin: 1rem 0;
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login > .login-username {
+    margin: 1rem 0;
+}
+
+.login > .login-username > label > img {
+    width: 4rem;
+    vertical-align: middle;
+}
+
+.login > .login-username > input {
+    height: 4rem;
+    font-size: 3rem;
+    color: white;
+    background-color: #90bbe9;
+    border: none;
+    border-bottom: 0.3rem solid white;
+}
+
+.login > .login-username > input::placeholder {
+    color: white;
+}
+
+.login > .prompt {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.login > button {
+    width: 30rem;
+    height: 5rem;
+    margin: 2rem 0;
+    background-color: #90bbe9;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    border: 0.3rem solid white;
+    cursor: pointer;
+}
+
+.login > button:hover {
+    background-color: white;
+    color: #90bbe9;
+}
+
+

@@ -1,0 +1,377 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* responsive design. set html initial font-size 10px which is relatived to my computer */
+html {
+    font-size: 0.78125vw;
+}
+
+  /* style of background picture */
+body { 
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(194, 216, 239, 0.8), rgba(229, 235, 246, 0.8)), url("../images/watermark_Eilok.png"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* style of navigation bar */
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    height: 8rem;
+    background-color: rgba(220, 220, 220, 0.5);
+}
+
+/* style of "Hobby" */
+nav > .topic {
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.topic > .char-H {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    box-sizing: border-box;
+    border: 0.6rem solid #7763f7;
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.topic > .char-obby {
+    display: inline-block;
+    margin-left: 0.3rem;
+    font-size:  3.5rem;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; 
+}
+
+/* style of navigation */
+nav > .navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    list-style: none;
+}
+
+.navigation > li {
+    margin: 3.2rem;
+}
+
+.navigation > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 0;
+}
+
+.navigation > li > a:hover {
+    color:#7763f7;
+}
+
+/* style of title */
+.big-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: 8rem;
+    margin: 0 auto;
+    margin-top: 3.5rem;
+    border-radius: 20rem;
+    background-color: #a2c5eb;
+}
+
+.big-head > .first-word {
+    font-size: 5rem;
+    font-weight: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.big-head > .second-word {
+    margin-left: 1.5rem;
+    font-size: 5rem;
+    font-weight: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7763f7;
+}
+
+/* style of a set of icons. Hobby items*/
+.icons-box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100rem;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+.icons-box > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32rem;
+    height: 32rem;
+    background-color: #a2c5eb;
+}
+
+.icons-box > li > img {
+    width: 21rem;
+    height: 21rem;
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+
+.icons-box > li > p {
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* style of line */
+.boundary {
+    height: 0.5rem;
+    width: 110rem;
+    border-radius: 20rem;
+    background-color: #7763f7;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+/* style of head sculpture area*/
+.head-sculpture-bar {
+    display:inline-block;
+    vertical-align: top;
+    margin-top: 8rem;
+    margin-left: 8rem;
+}
+
+.head-sculpture {
+    width: 17rem;
+}
+
+.name {
+    margin-top: 1rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signature {
+    width: 22rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #797979;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* style of display area */
+.display-area {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: top;
+    width: 80rem;
+    margin: 7rem;
+    background-color: rgba(245, 247, 252, 0.7);
+    border-radius: 5rem;
+}
+
+.display-area > .display-head {
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+/* style of high jump article */
+.high-jump-article {
+    display: flex;
+    flex-direction: row;
+    width:75rem;
+    margin: 2rem 0;
+}
+
+.high-jump-article > img {
+    width: 35rem;
+    margin-right: 2rem;
+}
+
+.high-jump-article > .high-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.high-part > .high-head {
+    padding-left: 0.4rem;
+    border-left: 0.3rem solid #7763f7;
+}
+
+.high-head > .high-title {
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.high-head > .high-time {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    color: #818386;
+}
+
+.high-part > .high-content {
+    position: relative;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.high-content::before {
+    position: absolute;
+    content: '';
+    top: -0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35rem;
+    border: 0.1rem dashed #7763f7;
+}
+
+/* style of basketball article */
+.basketball-article {
+    display: flex;
+    flex-direction: row;
+    width:75rem;
+    margin: 2rem 0;
+}
+
+.basketball-article > img {
+    width: 35rem;
+    margin-left: 2rem;
+}
+
+.basketball-article > .basketball-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.basketball-part > .basketball-head {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 0.4rem;
+    border-right: 0.3rem solid #7763f7;
+}
+
+.basketball-head > .basketball-title {
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.basketball-head > .basketball-time {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    color: #818386;
+}
+
+.basketball-part > .basketball-content {
+    position: relative;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.basketball-content::before {
+    position: absolute;
+    content: '';
+    top: -0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35rem;
+    border: 0.1rem dashed #7763f7;
+}
+
+/* style of guitar article */
+.guitar-article {
+    display: flex;
+    flex-direction: row;
+    width:75rem;
+    margin: 2rem 0;
+}
+
+.guitar-article > img {
+    width: 35rem;
+    margin-right: 2rem;
+}
+
+.guitar-article > .guitar-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.guitar-part > .guitar-head {
+    padding-left: 0.4rem;
+    border-left: 0.3rem solid #7763f7;
+}
+
+.guitar-head > .guitar-title {
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.guitar-head > .guitar-time {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    color: #818386;
+}
+
+.guitar-part > .guitar-content {
+    position: relative;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.guitar-content::before {
+    position: absolute;
+    content: '';
+    top: -0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35rem;
+    border: 0.1rem dashed #7763f7;
+}
+
+/* style of copyright area */
+footer {
+    position: relative;
+    height: 8rem;
+    width: 100%;
+    background-color: #cecece;
+}
+
+footer > span {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+    text-align: center;
+    border-top: 0.3rem solid #bfc2c9;
+}

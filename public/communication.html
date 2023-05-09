@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://at.alicdn.com;">
+    <title>Eilok world: chat</title>
+    <link rel="shortcut icon" href="./icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/communication.css" type="text/css">
+    <script src="./JS/communication.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <!-- login interface(initial hidding) -->
+    <div class="bg-login">
+        <div class="login">
+            <h3>LOGIN</h3>
+            <div class="login-username">
+                <label for="login-username"><img src="./images/communication/account.png" alt=""></label>
+                <input type="text" placeholder="  Username" id="login-username" name="login-username">
+            </div>
+            
+            <p class="prompt">*enter your favourite nickname</p>
+
+            <button type="submit" id="login-submit">Sign In</button>
+        </div>
+    </div>
+
+    <!-- make the whole page be a grid -->
+    <div class="grid-container">
+        <!-- leftmost column: functional area -->
+        <div class="functional-area">
+            <div class="head">
+                <img src="./images/communication/head_portrait_login.svg" alt="">
+            </div>
+            <ul class="function-key">
+                <li><img src="./images/communication/user_list_selected.png" alt="haha"></li>
+                <li><img src="./images/communication/private_chat_unselected.png" alt=""></li>
+                <li><img src="./images/communication/setting_unselected.png" alt=""></li>
+            </ul>
+            <div class="exit">
+                <img src="./images/communication/exit.png" alt="">
+            </div>
+        </div>
+
+        <!-- user list -->
+        <ul class="user-list">
+            <li class="user-number-display">
+                <!-- green circle -->
+                <div></div>
+                <p id="user-number">0 user is online</p>
+            </li>
+            
+        </ul>
+
+        <!-- chat box -->
+        <div class="chat-box">
+
+        </div>
+
+        <!-- input field -->
+        <div class="input-field">
+            <input type="text" placeholder="   Type your message..." id="input-field">
+            <div id="send-btn"><img src="./images/communication/send.png" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>

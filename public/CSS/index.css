@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* responsive design. set html initial font-size 10px which is relatived to my computer */
+html {
+    font-size: 0.78125vw;
+}
+
+/* the first background style*/
+.background1 {
+    position: fixed;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background: url(../images/background1.png) no-repeat center center ;/*背景图路径 背景图不平铺 背景图垂直、水平均居中 */
+    background-size: cover;
+}
+
+/* style of navigation bar */
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    height: 8rem;
+    background-color: rgba(220, 220, 220, 0.5);
+}
+
+/* style of "Hobby" */
+nav > .topic {
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.topic > .char-I {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    box-sizing: border-box;
+    border: 0.6rem solid #7763f7;
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.topic > .char-ntroduction {
+    display: inline-block;
+    margin-left: 0.3rem;
+    font-size:  3.5rem;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; 
+}
+
+/* style of navigation */
+nav > .navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    list-style: none;
+}
+
+.navigation > li {
+    margin: 3.2rem;
+}
+
+.navigation > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 0;
+}
+
+.navigation > li > a:hover {
+    color:#7763f7;
+}
+
+
+/* set the style of chat box */
+.chat-box {
+    position: relative;
+    left: 13rem;
+    top: 4.3rem;
+    height: 7rem;
+    width: 7rem;
+    background-color: #7763f7;
+    font-size: 4rem;
+    font-weight:700;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 7rem;
+}
+
+/* using pseudo element to make triangle */
+.chat-box:after{
+    content: "";
+    border-top: solid 4.5rem #7763f7;
+    border-left: solid 1.1rem #00800000;
+    border-right: solid 1.2rem #00800000;
+    border-bottom: solid 0 #00800000;
+    position: absolute;
+    left: 92%;
+    top: 77%;
+    transform: rotate(-40deg);
+}
+
+
+/* set the style of calling card */
+.calling-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem 8rem 8rem 8rem;
+    padding-bottom: 4rem;
+    background-color: rgba(128, 177, 230, 0.74);
+}
+
+.calling-card > .personal-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50rem;
+    list-style: none;
+    margin-top: 3.7rem;
+}
+
+/* choose the first li */
+.personal-information > li:first-child {
+    color: white;
+    font-size: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-bottom: 0.5rem solid white;
+    text-align: center;
+}
+
+/* choose the other li */
+.personal-information > *:not(:first-child) {
+    color: white;
+    font-size: 3.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.my-photo {
+    width: 42rem;
+    margin-left: 4rem;
+    margin-top:4rem;
+}
+
+/* the second background style */
+.background2 {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color:#afcdee;
+}
+
+/* the style of sitemap */
+.sitemap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    padding: 3rem 5rem;
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8rem;
+    background-color: #a2c5eb;
+}
+
+/* style of title */
+.sitemap > h3 {
+    position: relative;
+    font-size: 5rem;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:900;
+    text-align: center;
+}
+
+/* draw a line with circular side using pseudo-element*/
+.sitemap > h3:after {
+    position: absolute;
+    content: '';
+    height: 0.5rem;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    border-radius: 50%;
+    background-color: #7763f7;
+}
+
+.sitemap > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.sitemap > ul > li {
+    width: 32rem;
+    margin: 2.4rem;
+    font-size: 3rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sitemap > ul > li > a {
+    width: 40rem;
+    font-size: 4rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.sitemap > ul > li > a:hover {
+    color:#7763f7;
+}
+
+/* style of copyright area */
+footer {
+    position: relative;
+    height: 8rem;
+    width: 100%;
+    background-color: #cecece;
+}
+
+footer > span {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+    text-align: center;
+    border-top: 0.3rem solid #bfc2c9;
+}
